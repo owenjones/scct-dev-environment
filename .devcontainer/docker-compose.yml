@@ -10,8 +10,6 @@ services:
     hostname: scctdev
     volumes:
       - '../home:/home/scct:z'
-    ports:
-      - 8000:8000
 
   mysql:
     container_name: scctdev_mariadb
