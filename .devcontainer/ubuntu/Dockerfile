@@ -3,10 +3,14 @@ FROM ubuntu:${UBUNTU_VERSION}
 
 RUN apt-get update
 RUN apt-get install -y \
-    python3.12 \
-    python3-pip \
-    python3-virtualenv \
-    python-is-python3
+  git \
+  curl \
+  wget \
+  iputils-ping \
+  python3.12 \
+  python3-pip \
+  python3-virtualenv \
+  python-is-python3
 
 ARG UID
 ARG GID
