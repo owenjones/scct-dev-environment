@@ -1,6 +1,6 @@
 services:
   ubuntu:
-    container_name: ubuntu
+    container_name: scctdev_ubuntu
     build:
       context: ubuntu
       args:
@@ -14,7 +14,7 @@ services:
       - 5000:5000
 
   mysql:
-    container_name: mariadb
+    container_name: scctdev_mariadb
     image: mariadb:latest
     volumes:
       - './mariadb/db:/var/lib/mysql:Z'
@@ -22,7 +22,7 @@ services:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD-password}
 
   mongodb:
-    container_name: mongodb
+    container_name: scctdev_mongodb
     image: mongo:latest
     volumes:
       - './mongodb/db:/data/db:Z'
@@ -31,7 +31,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD-password}
 
   phpmyadmin:
-    container_name: phpmyadmin
+    container_name: scctdev_phpmyadmin
     image: phpmyadmin:latest
     ports:
       - 8080:80
@@ -42,7 +42,7 @@ services:
       - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD-password}
 
   mongo-express:
-    container_name: mongoexpress
+    container_name: scctdev_mongoexpress
     image: mongo-express:latest
     ports:
       - 8081:8081
