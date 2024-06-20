@@ -7,6 +7,7 @@ RUN apt-get install -y \
   curl \
   wget \
   iputils-ping \
+  mysql-client \
   python3.12 \
   python3-pip \
   python3-virtualenv \
