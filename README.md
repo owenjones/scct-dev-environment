@@ -21,7 +21,8 @@ So far tested on:
 * Install prerequisite software
 * Download SCCT Development Environment (download this repository as a zip and extract it)
 * Open environment in Visual Studio Code and choose option 'Open in Container' when prompted
-* Wait while containers are downloaded and initialised
+  * Or use the connection button (bottom left), choose 'Open Folder in Container' and browse to the extracted folder
+* Wait while container images are downloaded and initialised
 
 ### Usage
 * Once containers are ready Visual Studio Code should drop you into the Ubuntu container with the file explorer in your home directory
