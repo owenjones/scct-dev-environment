@@ -7,10 +7,9 @@ Once setup students should have a core development container (Ubuntu) supported 
 * visual mysql administration tool (phpmyadmin)
 * visual mongodb administration tool (mongo express)
 
-So far tested on:
-* Windows (staff build only currently)
+So far only tested on:
+* Windows (staff build)
 * macOS (non-UWE build)
-* linux (Fedora)
 
 ## Setup and installation
 ### Prerequisites
