@@ -28,8 +28,8 @@ So far tested on:
 * Use Visual Studio Code as normal -- create new folders for workspaces and File > Open Folder to use the workspace
 * Terminal > New Terminal to interact with the container
 * Ports are already forward to allow access to:
-  * [PHPMyAdmin](localhost:8080) - on port 8080
-  * [Mongo Express](localhost:8081) - on port 8081
+  * [PHPMyAdmin](http://localhost:8080) - on port 8080
+  * [Mongo Express](http://localhost:8081) - on port 8081
 
 #### Ubuntu (core development container)
 Python 3.12 (with pip and virtualenv packages) and git are included in the core container -- need to work out what other packages we should include by default. Currently the container is locked down but we could setup scct to be able to run commands with `sudo` to allow them to install anything they want into the container.
