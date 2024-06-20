@@ -14,8 +14,13 @@ services:
     image: mariadb:latest
     volumes:
       - './mariadb/db:/var/lib/mysql:Z'
+      - './mariadb/init:/docker-entrypoint-initdb.d'
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD-password}
+      - MARIADB_USER=${MARIADB_USER-scct}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD-scctdev}
+      - MARIADB_DATABASE=${MARIADB_DATABASE-scct_database}
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD-password}
+      - MARIADB_AUTO_UPGRADE=true
 
   mongodb:
     image: mongo:latest
@@ -32,8 +37,8 @@ services:
     environment:
       - PMA_HOST=mysql
       - PMA_PORT=3306
-      - PMA_USER=${MYSQL_ROOT_USER-root}
-      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD-password}
+      - PMA_USER=${MARIADB_USER-scct}
+      - PMA_PASSWORD=${MARIADB_PASSWORD-scctdev}
 
   mongo-express:
     image: mongo-express:latest
