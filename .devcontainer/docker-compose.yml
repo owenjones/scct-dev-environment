@@ -20,7 +20,6 @@ services:
     environment:
       - MARIADB_USER=${MARIADB_USER-scct}
       - MARIADB_PASSWORD=${MARIADB_PASSWORD-scctdev}
-      - MARIADB_DATABASE=${MARIADB_DATABASE-scct_database}
       - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD-password}
       - MARIADB_AUTO_UPGRADE=true
 
