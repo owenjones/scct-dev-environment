@@ -41,6 +41,9 @@ services:
       - PMA_PORT=3306
       - PMA_USER=${MARIADB_USER-scct}
       - PMA_PASSWORD=${MARIADB_PASSWORD-scctdev}
+      - PMA_PMADB=phpmyadmin
+      - PMA_CONTROLUSER=phpmyadmin
+      - PMA_CONTROLPASS=60cfd180192e88712c3d1d638bba67730ce5
 
   mongo-express:
     image: mongo-express:latest
