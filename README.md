@@ -1,5 +1,5 @@
 # SCCT Development Environment
-A proof of concept for a development environment for students to provide a common cross-platform setup for students working either on university machines or on their own computers.
+A proof of concept for a development environment to provide a common cross-platform setup for students working either on university machines or on their own computers.
 
 Once setup students should have a core development container (Ubuntu) supported by:
 * mysql server (mariadb) with configured user and example databases
