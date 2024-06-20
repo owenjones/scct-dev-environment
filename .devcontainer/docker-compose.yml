@@ -9,12 +9,14 @@ services:
     hostname: scctdev
     volumes:
       - '../home:/home/scct:z'
+      - './mariadb/socket:/var/run/mysqld:z'
 
   mysql:
     image: mariadb:latest
     volumes:
       - './mariadb/db:/var/lib/mysql:Z'
       - './mariadb/init:/docker-entrypoint-initdb.d'
+      - './mariadb/socket:/var/run/mysqld:z'
     environment:
       - MARIADB_USER=${MARIADB_USER-scct}
       - MARIADB_PASSWORD=${MARIADB_PASSWORD-scctdev}
