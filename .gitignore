@@ -1,1 +1,3 @@
-container/home
+container
+container/.devcontainer/.*CommandMarker
+!container/.devcontainer
