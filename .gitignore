@@ -1,3 +1,5 @@
 container
 container/.devcontainer/.*CommandMarker
+container/.devcontainer/mariadb/{db,socket}
+container/.devcontainer/mongodb/db
 !container/.devcontainer
