@@ -19,7 +19,7 @@ So far tested on:
 
 ### Installation
 * Install prerequisite software
-* Download SCCT Development Environment
+* Download SCCT Development Environment (download this repository as a zip and extract it)
 * Open environment in Visual Studio Code and choose option 'Open in Container' when prompted
 * Wait while containers are downloaded and initialised
 
