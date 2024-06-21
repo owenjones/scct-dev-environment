@@ -1,6 +1,7 @@
-container
-container/.devcontainer/.*CommandMarker
-container/.devcontainer/mariadb/{db,socket}
-container/.devcontainer/mongodb/db
+container/*
+!container/README.pdf
 !container/.devcontainer
-!container/README.md
+container/.devcontainer/.*CommandMarker
+container/.devcontainer/mariadb/db
+container/.devcontainer/mariadb/socket
+container/.devcontainer/mongodb/db
