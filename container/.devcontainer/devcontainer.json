@@ -13,6 +13,7 @@
   "remoteUser": "scct",
   "overrideCommand": true,
   "forwardPorts": [
+    3306, // mariadb
     8080, // phpmyadmin
     8081 // mongo-express
   ],

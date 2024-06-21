@@ -17,6 +17,8 @@ services:
       - './mariadb/db:/var/lib/mysql:Z'
       - './mariadb/init:/docker-entrypoint-initdb.d'
       - './mariadb/socket:/var/run/mysqld:z'
+    ports:
+      - 3306:3306
     environment:
       - MARIADB_USER=${MARIADB_USER-scct}
       - MARIADB_PASSWORD=${MARIADB_PASSWORD-scctdev}
