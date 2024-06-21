@@ -1,11 +1,6 @@
 services:
   ubuntu:
-    build:
-      context: ubuntu
-      args:
-        - UBUNTU_VERSION=${UBUNTU_VERSION-latest}
-        - UID=${UID-1000}
-        - GID=${GID-1000}
+    image: ghcr.io/owenjones/scct-dev-container:${SDC_RELEASE-latest}
     hostname: scctdev
     volumes:
       - '../:/home/scct:z'
