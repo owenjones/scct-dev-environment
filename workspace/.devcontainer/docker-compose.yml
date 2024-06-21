@@ -23,7 +23,7 @@ services:
   mongodb:
     image: mongo:latest
     volumes:
-      - './mongodb/db:/data/db:Z'
+      - './mongodb:/data/db:Z'
     environment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER-root}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD-password}
