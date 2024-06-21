@@ -1,3 +1,4 @@
+.env
 workspace/*
 !workspace/README.pdf
 !workspace/.devcontainer
