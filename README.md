@@ -18,9 +18,9 @@ So far only tested on:
 
 ### Installation
 * Install prerequisite software
-* Download SCCT Development Environment (download this repository as a zip and extract it)
-* Open environment in Visual Studio Code and choose option 'Open in Container' when prompted
-  * Or use the connection button (bottom left), choose 'Open Folder in Container' and browse to the extracted folder
+* Download SCCT Development Environment (currently the zip file in the root of this repository)
+* Extract the zip file and open the workspace folder (scct-dev-environment) in Visual Studio Code - choose option 'Open in Container' when prompted
+  * Or use the Remote Connection button (bottom left), choose 'Open Folder in Container...' and browse to the workspace folder
 * Wait while container images are downloaded and initialised
 
 ### Usage
@@ -32,7 +32,7 @@ So far only tested on:
   * [Mongo Express](http://localhost:8081) - on port 8081
 
 #### Ubuntu (core development container)
-Python 3.12 (with pip and virtualenv packages) and git are included in the core container -- need to work out what other packages we should include by default. Currently the container is locked down but we could setup scct to be able to run commands with `sudo` to allow them to install anything they want into the container.
+Python 3.12 (with pip and virtualenv packages) and git are included in the core container - need to work out what other packages we should include by default. Currently the container is locked down but we could setup scct to be able to run commands with `sudo` to allow them to install anything they want into the container.
 
 #### MySQL
 A user is provisioned on setup:
