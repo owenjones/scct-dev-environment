@@ -28,6 +28,7 @@ So far only tested on:
 * Use Visual Studio Code as normal -- create new folders for workspaces and File > Open Folder to use the workspace
 * Terminal > New Terminal to interact with the container
 * Ports are already forward to allow access to:
+  * the MySQL server (e.g. for MySQL Workbench) - on port 3306
   * [PHPMyAdmin](http://localhost:8080) - on port 8080
   * [Mongo Express](http://localhost:8081) - on port 8081
 
