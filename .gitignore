@@ -1,7 +1,7 @@
-container/*
-!container/README.pdf
-!container/.devcontainer
-container/.devcontainer/.*CommandMarker
-container/.devcontainer/mariadb/db
-container/.devcontainer/mariadb/socket
-container/.devcontainer/mongodb/db
+workspace/*
+!workspace/README.pdf
+!workspace/.devworkspace
+workspace/.devworkspace/.*CommandMarker
+workspace/.devworkspace/mariadb/db
+workspace/.devworkspace/mariadb/socket
+workspace/.devworkspace/mongodb/db
