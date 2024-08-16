@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is building release ${{ github.event.release.tag_n
 on:
   release:
     types: [published]
-    
+
 permissions:
   contents: write
 
@@ -63,3 +63,6 @@ jobs:
         with:
           artifacts: "scct-dev-environment-${{ github.event.release.tag_name }}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
+          allowUpdates: true
+          replacesArtifacts: true
+          tag: ${{ github.event.release.tag_name }}
