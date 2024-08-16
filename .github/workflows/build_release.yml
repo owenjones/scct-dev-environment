@@ -30,7 +30,7 @@ jobs:
         with:
           context: "{{defaultContext}}:build"
           push: true
-          tags: owenjones/scct-dev-environment:${{ github.event.release.tag_name }}
+          tags: ghcr.io/owenjones/scct-dev-environment:${{ github.event.release.tag_name }}
         
       - name: Zip workspace
         uses: thedoctor0/zip-release@0.7.5
