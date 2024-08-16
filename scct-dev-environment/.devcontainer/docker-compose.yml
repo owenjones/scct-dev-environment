@@ -1,6 +1,6 @@
 services:
   ubuntu:
-    image: ghcr.io/owenjones/scct-dev-container:${SDC_RELEASE-latest}
+    image: ghcr.io/owenjones/scct-dev-environment:${SDC_RELEASE-latest}
     hostname: scctdev
     volumes:
       - '../:/home/scct:z'
