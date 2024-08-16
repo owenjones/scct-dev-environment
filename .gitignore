@@ -1,8 +1,7 @@
-.env
-workspace/*
-!workspace/README.pdf
-!workspace/.devcontainer
-workspace/.devcontainer/.*CommandMarker
-workspace/.devcontainer/mariadb/db
-workspace/.devcontainer/mariadb/socket
-workspace/.devcontainer/mongodb/db
+.vscode
+scct-dev-environment/*
+!scct-dev-environment/.devcontainer/.env
+!scct-dev-environment/.devcontainer/devcontainer.json
+!scct-dev-environment/.devcontainer/docker-compose.yml
+!scct-dev-environment/.devcontainer/mariadb/init
+!scct-dev-environment/README.pdf
