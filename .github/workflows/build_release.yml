@@ -5,15 +5,20 @@ on:
     types: [published]
 
 jobs:
-  build:
+  build-image:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Add release tag to devcontainer env
-        working-directory: ./scct-dev-environment
-        run: echo "SDC_RELEASE=\"${{ github.event.release.tag_name }}\"" >> .env
+      - name: Extract metadata for the Docker image
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/owenjones/scct-dev-environment
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=sha,prefix={{branch}}-,suffix=-{{date 'X'}}
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -31,7 +36,18 @@ jobs:
           context: "{{defaultContext}}:build"
           push: true
           tags: ghcr.io/owenjones/scct-dev-environment:${{ github.event.release.tag_name }}
+          labels: ${{ steps.meta.outputs.labels }}
         
+  build-workspace:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Add release tag to devcontainer env
+        working-directory: ./scct-dev-environment
+        run: echo "SDC_RELEASE=\"${{ github.event.release.tag_name }}\"" >> .env
+
       - name: Zip workspace
         uses: thedoctor0/zip-release@0.7.5
         with:
