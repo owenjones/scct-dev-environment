@@ -5,7 +5,8 @@ on:
     types: [published]
 
 permissions:
-  contents: write
+  contents: read
+  packages: write
 
 jobs:
   build-image:
@@ -64,5 +65,6 @@ jobs:
           artifacts: "scct-dev-environment-${{ github.event.release.tag_name }}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
-          replacesArtifacts: true
+          removeArtifacts: true
+          name: ${{ github.event.release.name }}
           tag: ${{ github.event.release.tag_name }}
