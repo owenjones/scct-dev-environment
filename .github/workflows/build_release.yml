@@ -3,6 +3,9 @@ run-name: ${{ github.actor }} is building release ${{ github.event.release.tag_n
 on:
   release:
     types: [published]
+    
+permissions:
+  contents: write
 
 jobs:
   build-image:
