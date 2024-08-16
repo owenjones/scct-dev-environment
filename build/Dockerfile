@@ -24,4 +24,4 @@ RUN chmod +x /init/post-start.sh
 
 USER scct
 
-LABEL org.opencontainers.image.source=https://github.com/owenjones/scct-dev-container
+LABEL org.opencontainers.image.source=https://github.com/owenjones/scct-dev-environment
